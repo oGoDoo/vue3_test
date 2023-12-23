@@ -20,7 +20,7 @@
 						},
 						set(newValue){
 							console.log(`有人把myRef这个容器中数据改为了：${newValue}`)
-							clearTimeout(timer)
+							clearTimeout(timer)//实现防抖效果
 							timer = setTimeout(()=>{
 								value = newValue
 								trigger() //通知Vue去重新解析模板
